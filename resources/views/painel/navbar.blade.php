@@ -1,8 +1,8 @@
 <!-- partial:partials/_navbar.html -->
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="{{ url('/painel') }}">Assessoria ADM</a>
-        <a class="navbar-brand brand-logo-mini" href="{{ url('/painel') }}">ADM</a>
+        <a class="navbar-brand brand-logo" href="{{ url('/painel') }}">Assessoria<i class="mdi mdi-run text-info"></i>ADM</a>
+        <a class="navbar-brand brand-logo-mini" href="{{ url('/painel') }}"><i class="mdi mdi-run text-info"></i>ADM</a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <div class="search-field d-none d-md-block">
@@ -41,7 +41,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                     <i class="mdi mdi-email-outline"></i>
-                    <span class="count-symbol bg-warning"></span>
+                    <span class="count-symbol bg-info"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                     <h6 class="p-3 mb-0">Messages</h6>
@@ -88,10 +88,10 @@
             <li class="nav-item dropdown">
                 <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                     <i class="mdi mdi-bell-outline"></i>
-                    <span class="count-symbol bg-danger"></span>
+                    <span class="count-symbol bg-info"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                    <h6 class="p-3 mb-0">Notifications</h6>
+                    <h6 class="p-3 mb-0">Notificações</h6>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">

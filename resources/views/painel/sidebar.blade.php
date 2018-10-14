@@ -12,7 +12,6 @@
                         <span class="font-weight-bold mb-2">Leandro Tavares</span>
                         <span class="text-secondary text-small">Administrador</span>
                     </div>
-                    <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
                 </a>
             </li>
             <li class="nav-item">

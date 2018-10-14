@@ -6,12 +6,11 @@
     <div class="content-wrapper">
 
         <div class="page-header">
-            <h3 class="page-title">Alunos</h3>
+            <h3 class="page-title">Alunos Cadastrados</h3>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <span></span>alunos cadastrados
-                        <i class="mdi mdi-alert-circle-outline icon-sm text-info align-middle"></i>
+                    <li>
+                        <a href="{{ url('painel/cadastro/aluno') }}" class="btn btn-gradient-info btn-rounded btn-fw">Cadatrar aluno</a>
                     </li>
                 </ul>
             </nav>
@@ -21,7 +20,6 @@
             <div class="col-12 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Alunos Cadastrados</h4>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -58,7 +56,7 @@
                                             Leandro Tavares
                                         </td>
                                         <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-danger">Pendente</label></td>
+                                        <td><label class="badge badge-gradient-success">Regular</label></td>
                                     </tr>
                                     <tr>
                                         <td>MA201801</td>
@@ -67,7 +65,7 @@
                                             Leandro Tavares
                                         </td>
                                         <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-danger">Pendente</label></td>
+                                        <td><label class="badge badge-gradient-success">Regular</label></td>
                                     </tr>
                                 </tbody>
                             </table>

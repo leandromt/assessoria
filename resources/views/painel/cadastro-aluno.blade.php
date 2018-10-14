@@ -33,25 +33,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Sexo</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-control">
-                                            <option>Masculino</option>
-                                            <option>Feminino</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Data de nascimento</label>
                                     <div class="col-sm-9">
                                         <input class="form-control" placeholder="dd/mm/yyyy"/>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Categoria</label>
@@ -64,11 +51,13 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Sexo</label>
                                     <div class="col-sm-4">
-                                        <div class="form-check">
+                                        <div class="form-check form-check-info">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
                                                 Masculino
@@ -76,7 +65,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
-                                        <div class="form-check">
+                                        <div class="form-check form-check-info">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
                                                 Feminino
@@ -85,10 +74,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-check form-check-info">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="statusAtivo" id="statusAtivo1" value="1" checked>
+                                                Ativo
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-check form-check-info">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="statusAtivo" id="statusAtivo2" value="0">
+                                                Inativo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="card-description">
-                            Endereço
-                        </p>
+                        <p class="card-description">Endereço</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
@@ -148,6 +156,8 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="submit" class="btn btn-gradient-info mr-2">Salvar</button>
+                        <button class="btn btn-gradient-danger">Cancelar</button>
                     </form>
                 </div>
             </div>
