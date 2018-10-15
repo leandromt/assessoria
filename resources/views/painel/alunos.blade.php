@@ -52,9 +52,15 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="#">op1</a>
-                                            <a href="#">op2</a>
-                                            <a href="#">op3</a>
+                                            <a href="#" title="Editar aluno">
+                                                <i class="mdi mdi-file-document icon-md text-info"></i>
+                                            </a>
+                                            <form class="form-destroy" method="DELETE" action="{{ route('alunos.destroy', $aluno->id) }}">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button type="submit" title="Excluir aluno">
+                                                    <i class="mdi mdi-delete icon-md text-danger"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

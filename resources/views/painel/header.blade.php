@@ -12,6 +12,7 @@
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ url('assets/dashboard/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/dashboard/css/custom.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ url('assets/dashboard/images/favicon.png') }}" />
 </head>

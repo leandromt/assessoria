@@ -115,6 +115,17 @@ class AlunoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        return "ae";
+
+        $alunoDestroy = $this->aluno->find($id);
+        $delete = $alunoDestroy->delete();
+
+        if($delete){
+            return redirect()->route('alunos.index');
+        }else{
+            return redirect()->route('alunos.index');
+        }
+
     }
 }
