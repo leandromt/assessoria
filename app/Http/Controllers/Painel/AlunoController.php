@@ -6,9 +6,18 @@ namespace App\Http\Controllers\Painel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Painel\Aluno;
 
 class AlunoController extends Controller
 {
+
+    private $aluno = '';
+
+    public function __construct(Aluno $aluno)
+    {
+        $this->aluno = $aluno;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +25,10 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        //
+        
+        $alunos = $this->aluno->all();
+
+        return view('painel.alunos', compact('alunos'));
     }
 
     /**
@@ -26,7 +38,7 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        //
+        return view('painel.cadastro-aluno');
     }
 
     /**
@@ -37,7 +49,28 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Return only one field
+        // $nome = $request->nome;
+
+        // Return only one field
+        // $request->input(nome);
+
+        // Return all fields
+        // dd( $request->all() );
+
+        // Return except fields
+        // $request->except(['matricula', 'status']) );
+
+        // Return select fields
+        $dataForm = $request->only(['nome', 'matricula', 'sexo', 'status']);
+
+        $insert = $this->aluno->create($dataForm);
+
+        if($insert)
+            return redirect()->route('alunos.index');
+        else
+            return redirect()->back();
+
     }
 
     /**

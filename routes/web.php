@@ -29,9 +29,7 @@ Route::group(['namespace' => 'Site'], function () {
 */
 Route::group(['namespace' => 'Painel'], function () {
 	Route::get('/painel','PainelController@index');
-	Route::get('/painel/alunos','PainelController@alunos');
-	Route::get('/painel/aluno/{id?}','PainelController@aluno');
-	Route::get('/painel/cadastro/aluno','PainelController@novoaluno');
+	Route::resource('/painel/alunos','AlunoController');
 	/* --- */
 	Route::get('/painel/cadastro','ProdutoController@cadastro');
 	Route::get('/painel/usuarios','PainelController@usuarios');

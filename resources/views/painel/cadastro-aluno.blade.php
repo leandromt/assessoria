@@ -10,22 +10,23 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Cadastrar novo aluno</h4>
-                    <form class="form-sample">
+                    <form class="form-sample" method="post" action="{{ route('alunos.store') }}">
                         <p class="card-description">Informações pessoais</p>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Nome</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" />
+                                        <input type="text" name="nome" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Sobre Nome</label>
+                                    <label class="col-sm-3 col-form-label">Matricula</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" />
+                                        <input type="text" name="matricula" class="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +60,7 @@
                                     <div class="col-sm-4">
                                         <div class="form-check form-check-info">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
+                                                <input type="radio" class="form-check-input" name="sexo" id="sexoM" value="M" checked>
                                                 Masculino
                                             </label>
                                         </div>
@@ -67,7 +68,7 @@
                                     <div class="col-sm-5">
                                         <div class="form-check form-check-info">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
+                                                <input type="radio" class="form-check-input" name="sexo" id="sexoF" value="F">
                                                 Feminino
                                             </label>
                                         </div>
@@ -80,7 +81,7 @@
                                     <div class="col-sm-4">
                                         <div class="form-check form-check-info">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="statusAtivo" id="statusAtivo1" value="1" checked>
+                                                <input type="radio" class="form-check-input" name="status" id="status1" value="1" checked>
                                                 Ativo
                                             </label>
                                         </div>
@@ -88,7 +89,7 @@
                                     <div class="col-sm-5">
                                         <div class="form-check form-check-info">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="statusAtivo" id="statusAtivo2" value="0">
+                                                <input type="radio" class="form-check-input" name="status" id="status0" value="0">
                                                 Inativo
                                             </label>
                                         </div>
@@ -157,7 +158,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-gradient-info mr-2">Salvar</button>
-                        <button class="btn btn-gradient-danger">Cancelar</button>
+                        <a href="{{ url('painel/alunos') }}" class="btn btn-gradient-danger">Cancelar</a>
                     </form>
                 </div>
             </div>

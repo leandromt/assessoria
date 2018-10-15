@@ -10,7 +10,7 @@ class Aluno extends Model
     // protected $table = 'alunos';
 
 	// white list filds database
-    protected $fillable = ['nome', 'email', 'matricula', 'sexo', 'ativo'];
+    protected $fillable = ['nome', 'matricula', 'sexo', 'status'];
 
     // black list filds database
     protected $guarded = [];

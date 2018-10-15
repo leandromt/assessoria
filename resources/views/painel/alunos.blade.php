@@ -10,7 +10,7 @@
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="{{ url('painel/cadastro/aluno') }}" class="btn btn-gradient-info btn-rounded btn-fw">Cadatrar aluno</a>
+                        <a href="{{ route('alunos.create') }}" class="btn btn-gradient-info btn-rounded btn-fw">Cadatrar aluno</a>
                     </li>
                 </ul>
             </nav>
@@ -27,46 +27,37 @@
                                         <th>Matrícula</th>
                                         <th>Nome</th>
                                         <th>Vencimento</th>
+                                        <th>Ativo</th>
                                         <th>Status</th>
+                                        <th>Opções</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($alunos as $aluno)
                                     <tr>
-                                        <td>MA201801</td>
-                                        <td>
-                                            <img src="{{ url('assets/dashboard/images/faces/face29.jpg') }}" class="mr-2" alt="image">
-                                            Leandro Tavares
-                                        </td>
+                                        <td>{{ $aluno->matricula }}</td>
+                                        <td>{{ $aluno->nome }}</td>
                                         <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-danger">Pendente</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>MA201801</td>
                                         <td>
-                                            <img src="{{ url('assets/dashboard/images/faces/face29.jpg') }}" class="mr-2" alt="image">
-                                            Leandro Tavares
-                                        </td>
-                                        <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-danger">Pendente</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>MA201801</td>
+                                            @if($aluno->ativo)
+                                                <label class="badge badge-gradient-success">Ativo</label></td>
+                                            @else
+                                                <label class="badge badge-gradient-danger">Inativo</label></td>
+                                            @endif
                                         <td>
-                                            <img src="{{ url('assets/dashboard/images/faces/face29.jpg') }}" class="mr-2" alt="image">
-                                            Leandro Tavares
+                                            @if($aluno->status)
+                                                <label class="badge badge-gradient-success">Regular</label></td>
+                                            @else
+                                                <label class="badge badge-gradient-danger">Pendente</label></td>
+                                            @endif
                                         </td>
-                                        <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-success">Regular</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>MA201801</td>
                                         <td>
-                                            <img src="{{ url('assets/dashboard/images/faces/face29.jpg') }}" class="mr-2" alt="image">
-                                            Leandro Tavares
+                                            <a href="#">op1</a>
+                                            <a href="#">op2</a>
+                                            <a href="#">op3</a>
                                         </td>
-                                        <td>01/11/2019</td>
-                                        <td><label class="badge badge-gradient-success">Regular</label></td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
