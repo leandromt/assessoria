@@ -21,6 +21,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ url('/painel/assessorias/') }}">
+                    <span class="menu-title">Assessorias</span>
+                    <i class="mdi mdi-run menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('/painel/alunos/') }}">
                     <span class="menu-title">Alunos</span>
                     <i class="mdi mdi-run menu-icon"></i>
