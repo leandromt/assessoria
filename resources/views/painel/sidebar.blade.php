@@ -23,7 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/painel/assessorias/') }}">
                     <span class="menu-title">Assessorias</span>
-                    <i class="mdi mdi-run menu-icon"></i>
+                    <i class="mdi mdi mdi-flag-checkered menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
@@ -33,9 +33,21 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ url('/painel/professores/') }}">
+                    <span class="menu-title">Professores</span>
+                    <i class="mdi mdi mdi-human menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span class="menu-title">Planilhas de treino</span>
                     <i class="mdi mdi-table-large menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/painel/corridaseeventos/') }}">
+                    <span class="menu-title">Corridas e eventos</span>
+                    <i class="mdi mdi mdi mdi mdi-trophy-variant-outline menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
