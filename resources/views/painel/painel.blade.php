@@ -1,4 +1,4 @@
-@include('painel.header')
+@include('painel.header', ['page_title' => $page_title])
 @include('painel.navbar')
 @include('painel.sidebar')
 
@@ -6,7 +6,7 @@
     <div class="content-wrapper">
 
         <div class="page-header">
-            <h3 class="page-title">Painel</h3>
+            <h3 class="page-title">{{ $section_title }}</h3>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item active" aria-current="page">

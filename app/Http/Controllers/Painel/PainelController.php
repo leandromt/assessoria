@@ -18,27 +18,16 @@ class PainelController extends Controller
 
 		// Apply Filter not int
 		// $this->middleware('auth')->except(['index']);
-        return view('painel.painel-home');
+        // return view('painel.painel-home');
 	}
 
     public function index () 
     {
 
-    	// Data
-    	$titulo = 'Seja bem vindo';
-    	$menu = ['item 1', 'item 2', 'item 3'];
-        $desc = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, impedit.";
-        $script = "<script type='text/javascript'>console.log('ae');</script>";
+    	$page_title = 'Seja bem vindo';
+        $section_title = 'Painel';
 
-        // pode ser utilizado a funcao compact('titulo','menu')
-    	return view('painel.painel', 
-    		[
-    			'titulo' => $titulo, 
-    			'menu' => $menu,
-                'desc' => $desc,
-                'script' => $script
-    		]
-    	);
+    	return view('painel.painel', compact('page_title', 'section_title'));
     }
 
     public function alunos () 
