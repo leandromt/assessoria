@@ -23,7 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/painel/assessorias/') }}">
                     <span class="menu-title">Assessorias</span>
-                    <i class="mdi mdi mdi-flag-checkered menu-icon"></i>
+                    <i class="mdi mdi-flag-checkered menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
@@ -59,7 +59,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span class="menu-title">Pagamentos</span>
-                    <i class="mdi mdi-cash-usd menu-icon"></i>
+                    <i class="mdi mdi-barcode menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">

@@ -5,12 +5,20 @@
 <div class="main-panel">
     <div class="content-wrapper">
 
+
         <div class="page-header">
-            <h3 class="page-title">{{ $controller_name }} Cadastrados</h3>
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-info text-white mr-2">
+                    <i class="mdi mdi-flag-checkered"></i>                 
+                </span>
+                {{ $controller_name }} Cadastrados
+            </h3>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="{{ route('alunos.create') }}" class="btn btn-gradient-info btn-rounded btn-fw">Cadatrar {{ $controller_single_name }}</a>
+                        <a href="{{ route('assessorias.create') }}" class="btn btn-gradient-info btn-rounded btn-fw">
+                            <i class="mdi mdi-plus-circle-outline"></i>
+                            Cadatrar {{ $controller_single_name }}</a>
                     </li>
                 </ul>
             </nav>

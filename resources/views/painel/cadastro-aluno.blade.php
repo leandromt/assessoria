@@ -7,9 +7,34 @@
 
         <!-- FORM TWO COLUMN -->
         <div class="col-12 grid-margin">
+            
+            
+
+            <div class="page-header">
+                <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-info text-white mr-2">
+                        <i class="mdi mdi-run"></i>                 
+                    </span>
+                    Cadastro de aluno
+                </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('alunos.index') }}">Alunos</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cadastro de aluno</li>
+                    </ol>
+                </nav>
+            </div>
+
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Cadastrar novo aluno</h4>
+                    @if( isset($errors) && count($errors) > 0 )
+                        <ul class="list-arrow list-error">
+                            @foreach( $errors->all() as $error )
+                                <li class="text-danger">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                     <form class="form-sample" method="post" action="{{ route('alunos.store') }}">
                         <p class="card-description">Informações pessoais</p>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -18,7 +43,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Nome</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="nome" class="form-control" />
+                                        <input type="text" name="nome" class="form-control" value="{{ old('nome') }}" />
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +51,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Matricula</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="matricula" class="form-control" />
+                                        <input type="text" name="matricula" class="form-control" value="{{ old('matricula') }}" />
                                     </div>
                                 </div>
                             </div>

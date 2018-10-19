@@ -14,4 +14,11 @@ class Aluno extends Model
 
     // black list filds database
     protected $guarded = [];
+
+    // Rules validation
+    public $rules = [
+    	'nome' => 'required|min:3|max:100',
+    	'matricula' => 'required|min:10|max:10',
+    	'sexo' => 'required'
+    ];
 }

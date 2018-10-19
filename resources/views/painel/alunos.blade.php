@@ -6,11 +6,19 @@
     <div class="content-wrapper">
 
         <div class="page-header">
-            <h3 class="page-title">Alunos Cadastrados</h3>
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-info text-white mr-2">
+                    <i class="mdi mdi-run"></i>                 
+                </span>
+                Alunos cadastrados
+            </h3>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="{{ route('alunos.create') }}" class="btn btn-gradient-info btn-rounded btn-fw">Cadatrar aluno</a>
+                        <a href="{{ route('alunos.create') }}" class="btn btn-gradient-info btn-rounded btn-fw">
+                            <i class="mdi mdi-account-plus"></i> 
+                            Cadatrar aluno
+                        </a>
                     </li>
                 </ul>
             </nav>

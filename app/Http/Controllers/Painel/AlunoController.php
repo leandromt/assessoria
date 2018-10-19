@@ -38,6 +38,8 @@ class AlunoController extends Controller
      */
     public function create()
     {
+        // Page form for create new aluno
+
         return view('painel.cadastro-aluno');
     }
 
@@ -62,8 +64,12 @@ class AlunoController extends Controller
         // $request->except(['matricula', 'status']) );
 
         // Return select fields
-        $dataForm = $request->only(['nome', 'matricula', 'sexo', 'status']);
+        $dataForm = $request->all();
 
+        // Validation
+        $this->validate($request, $this->aluno->rules);
+
+        // Insert Database
         $insert = $this->aluno->create($dataForm);
 
         if($insert)

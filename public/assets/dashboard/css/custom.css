@@ -8,3 +8,9 @@
 	margin: 0;
 	cursor: pointer;
 }
+.page-title .page-title-icon {
+	box-shadow: none;
+}
+.list-error li::before {
+	color: #fe7c96;
+}
