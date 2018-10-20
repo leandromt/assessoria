@@ -42,7 +42,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Nome</label>
+                                        <label class="col-sm-3 col-form-label">Nome<span class="text-danger">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="text" name="nome" class="form-control" value="{{ old('nome') }}" />
                                         </div>
@@ -60,7 +60,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Data de nascimento</label>
+                                        <label class="col-sm-3 col-form-label">Data de nascimento<span class="text-danger">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="date" class="form-control" placeholder="dd/mm/yyyy"/>
                                         </div>
@@ -91,7 +91,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">CPF</label>
+                                        <label class="col-sm-3 col-form-label">CPF<span class="text-danger">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="text" name="cpf" class="form-control" value="{{ old('cpf') }}" />
                                         </div>
@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Email</label>
+                                        <label class="col-sm-3 col-form-label">Email<span class="text-danger">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="text" name="email" class="form-control" value="{{ old('email') }}" />
                                         </div>
@@ -208,9 +208,41 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Vencimento</label>
+                                        <label class="col-sm-3 col-form-label">Dia do vencimento<span class="text-danger">*</span></label>
                                         <div class="col-sm-9">
-                                            <input type="date" class="form-control" name="vencimento" id="vencimento" placeholder="dd/mm/yyyy"/>
+                                            <select class="form-control">
+                                                <option value=""></option>
+                                                <option value="1">01/mês</option>
+                                                <option value="2">02/mês</option>
+                                                <option value="3">03/mês</option>
+                                                <option value="4">04/mês</option>
+                                                <option value="5">05/mês</option>
+                                                <option value="6">06/mês</option>
+                                                <option value="7">07/mês</option>
+                                                <option value="8">08/mês</option>
+                                                <option value="9">09/mês</option>
+                                                <option value="10">10/mês</option>
+                                                <option value="11">11/mês</option>
+                                                <option value="12">12/mês</option>
+                                                <option value="13">13/mês</option>
+                                                <option value="14">14/mês</option>
+                                                <option value="15">15/mês</option>
+                                                <option value="16">16/mês</option>
+                                                <option value="17">17/mês</option>
+                                                <option value="18">18/mês</option>
+                                                <option value="19">19/mês</option>
+                                                <option value="20">20/mês</option>
+                                                <option value="21">21/mês</option>
+                                                <option value="22">22/mês</option>
+                                                <option value="23">23/mês</option>
+                                                <option value="24">24/mês</option>
+                                                <option value="25">25/mês</option>
+                                                <option value="26">26/mês</option>
+                                                <option value="27">27/mês</option>
+                                                <option value="28">28/mês</option>
+                                                <option value="29">29/mês</option>
+                                                <option value="30">30/mês</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

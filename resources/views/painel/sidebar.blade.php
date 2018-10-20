@@ -33,6 +33,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ url('/painel/turmas/') }}">
+                    <span class="menu-title">Turmas</span>
+                    <i class="mdi mdi-account-multiple menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('/painel/professores/') }}">
                     <span class="menu-title">Professores</span>
                     <i class="mdi mdi mdi-human menu-icon"></i>
