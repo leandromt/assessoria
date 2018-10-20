@@ -184,6 +184,37 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Situação</label>
+                                        <div class="col-sm-4">
+                                            <div class="form-check form-check-success">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="situacao" id="regular1" value="1" checked>
+                                                    Regular
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-check form-check-danger">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="situacao" id="regular0" value="0">
+                                                    Pendente
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Vencimento</label>
+                                        <div class="col-sm-9">
+                                            <input type="date" class="form-control" name="vencimento" id="vencimento" placeholder="dd/mm/yyyy"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                             <div class="btns-group-right">
                                 <button type="submit" class="btn btn-gradient-info mr-2">Salvar</button>

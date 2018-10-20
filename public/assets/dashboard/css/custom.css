@@ -14,3 +14,7 @@
 .list-error li::before {
 	color: #fe7c96;
 }
+.btns-group-right {
+	text-align: right;
+	padding-top: 20px;
+}
