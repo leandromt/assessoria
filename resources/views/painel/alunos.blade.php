@@ -32,9 +32,9 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Matrícula</th>
+                                        <th>id</th>
                                         <th>Nome</th>
-                                        <th>Vencimento</th>
+                                        <th>Turma</th>
                                         <th>Ativo</th>
                                         <th>Status</th>
                                         <th>Opções</th>
@@ -43,25 +43,25 @@
                                 <tbody>
                                     @foreach($alunos as $aluno)
                                     <tr>
-                                        <td>{{ $aluno->matricula }}</td>
+                                        <td>#{{ $aluno->id }}</td>
                                         <td>{{ $aluno->nome }}</td>
-                                        <td>01/11/2019</td>
+                                        <td>Maraponga 19h</td>
                                         <td>
-                                            @if($aluno->ativo)
+                                            @if($aluno->status)
                                                 <label class="badge badge-gradient-success">Ativo</label></td>
                                             @else
                                                 <label class="badge badge-gradient-danger">Inativo</label></td>
                                             @endif
                                         <td>
-                                            @if($aluno->status)
+                                            @if($aluno->situacao)
                                                 <label class="badge badge-gradient-success">Regular</label></td>
                                             @else
                                                 <label class="badge badge-gradient-danger">Pendente</label></td>
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="icons-table-size">
                                             <a href="#" title="Editar aluno">
-                                                <i class="mdi mdi-file-document icon-md text-info"></i>
+                                                <i class="mdi mdi-file-document icon-md text-secondary"></i>
                                             </a>
                                             <form class="form-destroy" method="DELETE" action="{{ route('alunos.destroy', $aluno->id) }}">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

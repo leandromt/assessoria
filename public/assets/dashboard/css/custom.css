@@ -18,3 +18,10 @@
 	text-align: right;
 	padding-top: 20px;
 }
+.icons-table-size a {
+	color: transparent;
+	overflow: hidden;
+}
+.icons-table-size .icon-md {
+    font-size: 1.3rem;
+}
