@@ -24,4 +24,13 @@ class Aluno extends Model
         'nascimento' => 'required',
         'vencimento' => 'required',
     ];
+
+    // Relacionamento 1 para muitos
+    public function turma ()
+    {
+        return $this->belongsTo('App\Models\Painel\Turma','id_turma','id');
+    }
+
+    
+
 }

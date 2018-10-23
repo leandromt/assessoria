@@ -15,4 +15,10 @@ class Assessoria extends Model
     // black list filds database
     protected $guarded = [];
 
+    //Relacinamento
+    public function turma()
+    {
+    	return $this->belongsTo('App\Models\Painel\Turma');
+    }
+
 }
