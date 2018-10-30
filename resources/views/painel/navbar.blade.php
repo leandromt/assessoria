@@ -32,7 +32,7 @@
                         Meus dados
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('login') }}">
                         <i class="mdi mdi-logout mr-2 text-primary"></i>
                         Sair
                     </a>
