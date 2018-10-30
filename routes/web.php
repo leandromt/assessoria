@@ -12,31 +12,24 @@
 */
 
 // Route::resource('ROUTE', 'PATH_CONTROLLER'); 
-Route::resource('/painel/produtos', 'Painel\ProdutoController');
+Route::redirect('/','/login', 301);
 
-/*
-	Group Route Site
-*/
-Route::group(['namespace' => 'Site'], function () {
-	//Route::get('PATH','NAMESPACE\NAME_CONTROLLER@NAME_FUNCTION');
-	Route::get('/','SiteController@index');
-	Route::get('/contato','SiteController@contato');
-	Route::get('/categoria/{id?}','SiteController@categoria');
-});
+Route::get('/login', function () {
+	return view('login');
+})->name('login');
+
 
 /*
 	Group Route Painel Administrator
 */
 Route::group(['namespace' => 'Painel'], function () {
-	Route::get('/painel','PainelController@index');
+	Route::get('/painel','PainelController@index')->name('home-painel');
 	Route::resource('/painel/alunos','AlunoController');
 	Route::resource('/painel/assessorias','AssessoriaController');
 	Route::resource('/painel/turmas','TurmaController');
-	/* --- */
 	Route::get('/painel/cadastro','ProdutoController@cadastro');
 	Route::get('/painel/usuarios','PainelController@usuarios');
 	Route::get('/painel/professores','PainelController@professores');
-	
 });
 
 
